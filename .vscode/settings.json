@@ -1,0 +1,13 @@
+{
+  "symfony-vscode.consolePath": "",
+  "symfony-vscode.fileWatchingPatterns": ["yml", "yaml", "xml"],
+  "symfony-vscode.parametersFilters": ["\\.class$", "_class$"],
+  "symfony-vscode.routesFilters": {
+    "^_assetic_": "id"
+  },
+  "symfony-vscode.servicesFilters": {
+    "[a-f0-9]{64}_[0-9]+": "id",
+    "~": "id",
+    "instanceof\\.": "id"
+  }
+}

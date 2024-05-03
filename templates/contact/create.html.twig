@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+  
+  {% block title %}{{ form.vars.data.id is null ? 'Create a new contact' : 'Edit Contact' }}{% endblock %}
+  
+  {% block body %}
+    <div>
+      <h3 class="mb-3">{{ form.vars.data.id is null ? 'Create a new contact' : 'Edit Contact' }}</h3>
+      {{ form_start(form) }}
+        <div class="form-group mt-2">
+          {{ form_label(form.name) }}
+          {{ form_widget(form.name, {'attr':{'class':'form-control'}}) }}
+        </div>
+        <div class="form-group mt-2">
+          {{ form_label(form.phone_number) }}
+          {{ form_widget(form.phone_number, {'attr':{'class':'form-control'}}) }}
+        </div>
+        <div class="form-group mt-2">
+          {{ form_label(form.address) }}
+          {{ form_widget(form.address, {'attr':{'class':'form-control'}}) }}
+        </div>
+        <button class="btn btn-primary mt-2">
+          {{ form.vars.data.id is null ? 'Save' : 'Update' }}
+        </button>
+      {{ form_end(form) }}
+    </div>
+  {% endblock %}
